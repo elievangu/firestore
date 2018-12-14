@@ -20,6 +20,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <!-- Compiled and minified CSS -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>React App</title>
   </head>
@@ -38,5 +40,21 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    
+
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCgvg-ecrwhb9YiZ3ubTHDcvsGu9qsP1sg",
+        authDomain: "my-firestore-app-bcea3.firebaseapp.com",
+        databaseURL: "https://my-firestore-app-bcea3.firebaseio.com",
+        projectId: "my-firestore-app-bcea3",
+        storageBucket: "my-firestore-app-bcea3.appspot.com",
+        messagingSenderId: "676876280121"
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore()
+      db.settings({ timestampInSnapshots: true });
+    </script>
   </body>
 </html>
